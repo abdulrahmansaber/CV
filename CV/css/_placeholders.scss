@@ -1,0 +1,16 @@
+/*
+ * Placeholders Selectors File in Scss.
+ * Containing ( Placholders And Attributes )
+ */
+
+%uppercase { text-transform: uppercase; }
+%light     { font-weight: 100; }
+%bold      { font-weight: bold; }
+%default-lineheight { line-height: 1.5em; }
+%absolute-position { position: absolute; }
+
+%section-defaults {
+	width: 1000px;
+	text-align: center;
+	margin: $margin + 15 auto;
+}

@@ -1,0 +1,41 @@
+/*
+ * Mixins File in Scss.
+ * Containing ( Scss Mixins )
+ */
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: #{$radius};
+	-moz-border-radius: #{$radius};
+	-ms-border-radius: #{$radius};
+	-o-border-radius: #{$radius};
+}
+
+@mixin transition($value) {
+	-webkit-transition: #{$value};
+	-moz-transition: #{$value};
+	-ms-transition: #{$value};
+	-o-transition: #{$value};
+}
+
+@mixin transform($transform-prop) {
+	-webkit-transform: #{$transform-prop};
+	-moz-transform: #{$transform-prop};
+	-ms-transform: #{$transform-prop};
+	-o-transform: #{$transform-prop};
+}
+
+@mixin bg-opacity($color, $value) {
+	background: transparentize($color, $value);
+}
+
+@mixin flex-box($wrap-type, $justify-type, $align-items-type) {
+	display: flex;
+	flex-wrap: $wrap-type;
+	justify-content: $justify-type;
+}
+
+@mixin circle-img($width-and-height) {
+	width: $width-and-height;
+	height: $width-and-height;
+	@include border-radius(50%);
+}

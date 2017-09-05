@@ -1,0 +1,182 @@
+// import all important scss files
+@import '_variables', '_mixins', '_placeholders';
+
+// Body Resets Gose Here
+body {
+  background-color: #F1F1F1;
+}
+
+/*
+ * Main Content  ( Containing Main Sections )
+ * [.left-info]  ( The Left Section That Have Picture Of You )
+ * [.right-info] ( Contains Right Section in main content that describe all informations about you )
+ */
+.main-content {
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  section {
+    padding: 15px;
+    margin-right: 1%;
+  }
+  .progress {
+    @include border-radius(15px);
+    width: 100%;
+    margin: auto;
+    background-color: #DDD;
+    position: relative;
+    margin-bottom: 15px;
+    div {
+      @include border-radius(15px 0 0 15px);
+      height: 100%;
+      padding: 0 56px;
+      color: #FFF;
+      background-color: $green-light;
+      font-family: 'Raleway';
+    }
+  }
+
+  // Left Informations
+  .left-info {
+    width: 28%;
+    background-color: #FFF;
+    box-shadow: 3px 3px 2px -2px grey,
+                0 4px 2px -2px grey;
+    .personal-informations-account {
+      display: block;
+      margin: auto;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+      width: 100%;
+      img {
+        @include circle-img(146px);
+      }
+      h1 {
+        margin: 15px 0 0;
+        font-weight: 100;
+        font-family: 'Questrial' !important;
+        font-size: 1.7em;
+      }
+      span {
+        display: block;
+        font-family: $ubuntu;
+      }
+    }
+    .personal-info {
+      padding: 15px 8px;
+      .heading-title {
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-weight: 100;
+        color: gray;
+        font-family: 'Karla';
+        text-transform: uppercase;
+        i {
+          color: $green-light;
+        }
+      }
+      span {
+        line-height: 2em;
+        display: block;
+        color: #555;
+        img {
+          width: 25px;
+          height: 18px;
+          padding-right: 5px;
+        }
+      }
+      hr {
+        border: 1px solid #f1f1f1;
+        margin: 10px 0;
+
+      }
+    }
+  }
+
+  // Right Informations
+  .right-info {
+    position: relative;
+    padding: 0;
+    width: 70%;
+    background-color: #FFF;
+    .header {
+      background-color: $green-light;
+      padding: 25px 32px;
+      color: #FFF;
+      width: 100%;
+      margin-bottom: 5px;
+      h2 {
+        font-weight: 100;
+        font-family: $ubuntu;
+      }
+    }
+    .content {
+      padding: 15px;
+      h3 {
+        font-weight: 100;
+        padding: 10px 15px;
+        color: gray;
+      }
+      .progress {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+      .skill {
+        margin: 15px 35px 5px;
+        display: block;
+        font-weight: bold;
+      }
+      .time {
+        display: block;
+        color: #777;
+        padding: 0 15px;
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+      p {
+        padding: 0 15px;
+        max-width: 75%;
+        font-family: 'Karla';
+      }
+    }
+  }
+}
+
+/*
+ * Footer
+ */
+footer {
+  background-color: $green-light;
+  padding: 15px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+  a {
+    color: #FFF;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 1.6em;
+    &:hover { color: #FFF; }
+  }
+}
+
+
+/* Make design responsive */
+@media (max-width: 950px) {
+  .main-content {
+    display: block;
+    section {
+      width: 100% !important;
+      margin: 15px auto;
+    }
+    .right-info {
+      .content {
+        p {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
